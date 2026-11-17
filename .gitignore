@@ -1,0 +1,16 @@
+# Python
+backend/.venv/
+**/__pycache__/
+*.py[cod]
+*$py.class
+backend/.pytest_cache/
+
+# Node
+frontend/node_modules/
+frontend/dist/
+frontend/.oxlintrc.json
+
+# Environment & OS
+.DS_Store
+*.log
+.env

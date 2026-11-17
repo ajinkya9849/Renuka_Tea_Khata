@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --cafe-primary: #5B2D16;
+    --cafe-espresso: #321707;
+    --cafe-caramel: #C45A0A;
+    --cafe-cream: #FFF6EC;
+    --cafe-beige: #FBEBDD;
+    --cafe-peach: #FFE7CC;
+    --cafe-dark-text: #181818;
+    --cafe-muted-text: #6B7280;
+    --cafe-success: #16803C;
+    --cafe-danger: #DC2626;
+  }
+
+  body {
+    background-color: #FFF6EC;
+    color: #181818;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FFF6EC;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #E6CEBA;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #C45A0A;
+}
+
+/* Safe area support for iOS home indicator and notch */
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 16px);
+}
+
+.safe-top {
+  padding-top: env(safe-area-inset-top, 16px);
+}
+
+/* Micro-animations */
+@keyframes pulse-subtle {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 0.3s ease-in-out;
+}
+
+@keyframes steam-rise {
+  0% { transform: translateY(0) scaleX(1); opacity: 0.8; }
+  50% { transform: translateY(-4px) scaleX(1.1); opacity: 0.5; }
+  100% { transform: translateY(-8px) scaleX(0.9); opacity: 0; }
+}
+
+.animate-steam {
+  animation: steam-rise 2s infinite ease-out;
+}
